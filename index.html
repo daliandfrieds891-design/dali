@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#08090d">
+<meta name="description" content="Website pribadi tentang perjuangan, proses, kesabaran, dan perjalanan hidup.">
+<title>Perjalanan — Jangan Menyerah</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:Georgia,"Times New Roman",serif;
+  background:#07080c;color:#f4f1e8;overflow-x:hidden;
+}
+body:before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:10;
+  background:radial-gradient(circle at 50% 20%,rgba(212,166,72,.09),transparent 35%);
+}
+canvas{position:fixed;inset:0;z-index:-1}
+.nav{
+  position:fixed;top:0;left:0;width:100%;z-index:20;
+  padding:22px 7%;display:flex;justify-content:space-between;align-items:center;
+  background:linear-gradient(to bottom,rgba(5,6,9,.9),transparent);
+}
+.logo{font-family:Arial,sans-serif;letter-spacing:4px;font-weight:700;color:#d8ae57}
+.nav a{color:#ddd;text-decoration:none;font:12px Arial,sans-serif;letter-spacing:2px}
+.hero{
+  min-height:100vh;display:flex;align-items:center;justify-content:center;
+  text-align:center;padding:100px 8% 70px;position:relative;
+}
+.hero-inner{max-width:1050px}
+.eyebrow{
+  color:#d8ae57;font:11px Arial,sans-serif;letter-spacing:6px;
+  text-transform:uppercase;margin-bottom:28px;animation:up 1s ease both;
+}
+h1{
+  font-size:clamp(48px,9vw,110px);line-height:.95;font-weight:400;
+  letter-spacing:-4px;margin-bottom:35px;animation:up 1.2s .1s ease both;
+}
+.gold{color:#d8ae57}
+.lead{
+  max-width:850px;margin:auto;color:#c9c6bd;
+  font-size:clamp(19px,2.5vw,28px);line-height:1.65;
+  animation:up 1.2s .25s ease both;
+}
+.scroll{
+  position:absolute;bottom:35px;left:50%;transform:translateX(-50%);
+  font:10px Arial,sans-serif;letter-spacing:4px;color:#8e8b84;
+  animation:pulse 2s infinite;
+}
+.section{padding:120px 8%;display:flex;justify-content:center}
+.card{
+  width:min(100%,980px);padding:70px clamp(28px,7vw,90px);
+  border:1px solid rgba(216,174,87,.22);
+  background:rgba(15,16,21,.78);backdrop-filter:blur(12px);
+  box-shadow:0 25px 80px rgba(0,0,0,.35);
+  position:relative;
+}
+.card:before,.card:after{
+  content:"";position:absolute;width:45px;height:45px;border-color:#d8ae57;
+}
+.card:before{top:-1px;left:-1px;border-top:2px solid;border-left:2px solid}
+.card:after{right:-1px;bottom:-1px;border-right:2px solid;border-bottom:2px solid}
+.label{font:10px Arial,sans-serif;letter-spacing:5px;color:#d8ae57;margin-bottom:25px}
+.quote{font-size:clamp(26px,4vw,43px);line-height:1.5;font-style:italic;color:#f3eee2}
+.quote span{color:#d8ae57}
+.story{
+  max-width:800px;margin-top:35px;font:16px/2 Arial,sans-serif;color:#aaa9a3;
+}
+.words{
+  padding:120px 8%;text-align:center;background:linear-gradient(180deg,transparent,rgba(216,174,87,.035),transparent)
+}
+.words h2{font-size:clamp(32px,5vw,60px);font-weight:400;margin-bottom:55px}
+.words-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:1000px;margin:auto}
+.word{
+  padding:38px 20px;border-top:1px solid rgba(216,174,87,.3);
+  color:#d7d3c8;font-size:20px;line-height:1.5;
+}
+.word b{display:block;color:#d8ae57;font:10px Arial,sans-serif;letter-spacing:3px;margin-bottom:12px}
+.final{
+  min-height:70vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:100px 8%;
+}
+.final h2{font-size:clamp(38px,7vw,82px);line-height:1.15;font-weight:400}
+.final p{margin-top:30px;color:#999;font:12px Arial,sans-serif;letter-spacing:4px;text-transform:uppercase}
+footer{padding:30px;text-align:center;color:#555;font:10px Arial,sans-serif;letter-spacing:2px}
+@keyframes up{from{opacity:0;transform:translateY(25px)}to{opacity:1;transform:none}}
+@keyframes pulse{0%,100%{opacity:.4}50%{opacity:1}}
+@media(max-width:700px){
+ .nav{padding:18px 5%}
+ .section{padding:80px 5%}
+ .words{padding:80px 5%}
+ .words-grid{grid-template-columns:1fr}
+ .card{padding:50px 25px}
+ h1{letter-spacing:-2px}
+}
+</style>
+</head>
+<body>
+<canvas id="stars"></canvas>
+
+<nav class="nav">
+  <div class="logo">DALI</div>
+  <a href="#perjalanan">PERJALANAN</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">A Story Of Patience & Strength</div>
+    <h1>Terus <span class="gold">Berjalan.</span></h1>
+    <p class="lead">Tidak semua perjuangan langsung menghasilkan sesuatu. Beberapa hal indah memang membutuhkan waktu untuk menjadi nyata.</p>
+  </div>
+  <div class="scroll">SCROLL UNTUK MELANJUTKAN</div>
+</section>
+
+<section class="section" id="perjalanan">
+  <div class="card">
+    <div class="label">PERJALANAN</div>
+    <div class="quote">
+      “Ingat, tidak semua perjuangan langsung menghasilkan sesuatu.
+      Ada proses yang memang membutuhkan waktu, ada kesabaran yang harus diuji,
+      dan ada perjalanan yang harus kamu lewati sendirian agar kamu menjadi seseorang yang <span>lebih kuat.</span>”
+    </div>
+    <p class="story">
+      Jangan malu memulai dari bawah. Jangan malu berjalan perlahan.
+      Setiap langkah kecil tetap membawa kamu lebih dekat kepada tujuan.
+      Tidak perlu membandingkan perjalananmu dengan orang lain.
+      Yang penting kamu tetap bergerak, tetap percaya pada proses,
+      dan yang paling penting — <b>kamu tidak menyerah.</b>
+    </p>
+  </div>
+</section>
+
+<section class="words">
+  <h2>Pelan bukan berarti <span class="gold">kalah.</span></h2>
+  <div class="words-grid">
+    <div class="word"><b>01</b>Diam bukan berarti menyerah.</div>
+    <div class="word"><b>02</b>Berproses bukan berarti gagal.</div>
+    <div class="word"><b>03</b>Mulai dari bawah bukan sebuah aib.</div>
+  </div>
+</section>
+
+<section class="final">
+  <div>
+    <h2>Jangan menyerah<br>pada <span class="gold">dirimu sendiri.</span></h2>
+    <p>Perjalananmu belum selesai.</p>
+  </div>
+</section>
+
+<footer>© 2026 —DALI • KEEP MOVING FORWARD</footer>
+
+<script>
+const c=document.getElementById("stars"),x=c.getContext("2d");
+let w,h,stars=[];
+function resize(){
+ w=c.width=innerWidth;h=c.height=innerHeight;
+ stars=Array.from({length:90},()=>({x:Math.random()*w,y:Math.random()*h,r:Math.random()*1.5+.2,s:Math.random()*.35+.08}));
+}
+function draw(){
+ x.clearRect(0,0,w,h);
+ for(const p of stars){
+  p.y-=p.s;if(p.y<0)p.y=h;
+  x.beginPath();x.arc(p.x,p.y,p.r,0,Math.PI*2);
+  x.fillStyle="rgba(216,174,87,.45)";x.fill();
+ }
+ requestAnimationFrame(draw);
+}
+addEventListener("resize",resize);resize();draw();
+</script>
+</body>
+</html>
